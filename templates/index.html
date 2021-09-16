@@ -12,12 +12,15 @@
     <script src="./swiper-bundle.min.js"></script>
     <link href="./aos.css" rel="stylesheet">
     <script src="./aos.js"></script>
+    <script src="./main.js"></script>
 </head>
 
 <body>
     <nav class="nav">
         <div class="logo">
-            <div class="logo-a"><span class="bold">Cy</span>Ton</div>
+            <a href="index.html">
+                <div class="logo-a"><span class="bold">Cy</span>Ton</div>
+            </a>
         </div>
         <div class="links">
             <ul>
@@ -47,13 +50,14 @@
                         <div class="price">
                             <div class="cash">KES 15,000</div><span class="month">/month</span>
                         </div>
-                        <div class="description">Go Big or Go Home! Get your own villa along the coast of Mombasa. Comple</div>
+                        <div class="description">Go Big or Go Home! Get your own villa along the coast of Mombasa.
+                            Comple</div>
                         <div class="row features">
                             <div class="size"><span>500</span>Sq Ft</div>
                             <div class="rooms"><span>1</span>Bedrooms</div>
                             <div class="parking"><span>2</span>Parking Slots</div>
                         </div>
-                        <div class="learn-more"><a href="">Learn More</a></div>
+                        <div class="learn-more"><a href="browse.html">Learn More</a></div>
                     </div>
                 </section>
             </div>
@@ -71,7 +75,7 @@
                             <div class="rooms"><span>1</span>Bedrooms</div>
                             <div class="parking"><span>2</span>Parking Slots</div>
                         </div>
-                        <div class="learn-more"><a href="">Learn More</a></div>
+                        <div class="learn-more"><a href="browse.html">Learn More</a></div>
                     </div>
                 </section>
             </div>
@@ -89,7 +93,7 @@
                             <div class="rooms"><span>1</span>Bedrooms</div>
                             <div class="parking"><span>2</span>Parking Slots</div>
                         </div>
-                        <div class="learn-more"><a href="">Learn More</a></div>
+                        <div class="learn-more"><a href="./browse.html">Learn More</a></div>
                     </div>
                 </section>
             </div>
@@ -246,34 +250,6 @@
         <div><a href="" class="footer-a">GitHub</a></div>
     </footer>
     <script>
-        const sm_nav = document.querySelector('.links');
-        const bar = document.querySelector('.bar');
-        const deactivate = document.querySelector('.landing');
-        const deactivate2 = document.querySelector('.hovering-card');
-        const deactivate3 = document.querySelector('.landing-img');
-
-
-        bar.addEventListener('click', () => {
-            sm_nav.classList.toggle('active');
-        });
-
-        deactivate.addEventListener('click', () => {
-            if (sm_nav.classList.contains('active')) {
-                sm_nav.classList.remove('active');
-            }
-        });
-
-        deactivate2.addEventListener('click', () => {
-            if (sm_nav.classList.contains('active')) {
-                sm_nav.classList.remove('active');
-            }
-        });
-
-        deactivate3.addEventListener('click', () => {
-            if (sm_nav.classList.contains('active')) {
-                sm_nav.classList.remove('active');
-            }
-        });
 
         const swiper = new Swiper('.swiper', {
             // Optional parameters
@@ -289,7 +265,7 @@
                 delay: 5000,
                 disableOnInteraction: false,
             },
-            
+
 
             // If we need pagination
             pagination: {
@@ -309,7 +285,6 @@
         });
 
         AOS.init();
-
     </script>
 </body>
 
