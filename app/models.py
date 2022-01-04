@@ -11,7 +11,7 @@ class House(models.Model):
     rooms = models.CharField(max_length=10, default="Undefined")
     parking = models.CharField(max_length=10, default="Undefined")
     # TYPE = Choices(('Rent', 'Sale'),)
-    type = models.CharField(max_length=10)
+    typer = models.CharField(max_length=10)
     # type = models.CharField(choices=TYPE, default="Rent", max_length=10)
 
     @property

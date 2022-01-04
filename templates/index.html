@@ -5,6 +5,7 @@ Home
 {% endblock title %}
 
 {% block content %}
+{% load static %}
 <!-- Slider main container -->
 <div class="swiper">
     <!-- Additional required wrapper -->
@@ -12,7 +13,7 @@ Home
         <!-- Slides -->
         <div class="swiper-slide">
             <section class="landing">
-                <img src="./slide-1.jpg" alt="" class="landing-img">
+                <img src="{% static 'images/slide_1.jpg' %}" alt="" class="landing-img">
                 <div class="hovering-card" data-aos="fade-up" data-aos-duration="1000" id="card-1">
                     <div class="card-title">Villa at the Coast</div><span class="for">For Rent</span>
                     <div class="price">
@@ -32,7 +33,7 @@ Home
         </div>
         <div class="swiper-slide">
             <section class="landing">
-                <img src="./slide-2.jpg" alt="" class="landing-img">
+                <img src="{% static 'images/slide_2.jpg' %}" alt="" class="landing-img">
                 <div class="hovering-card" data-aos="fade-up" id="card-2">
                     <div class="card-title">All Kind Of Houses</div><span class="for">For Rent</span>
                     <div class="price">
@@ -50,7 +51,7 @@ Home
         </div>
         <div class="swiper-slide">
             <section class="landing">
-                <img src="./slide-3.jpg" alt="" class="landing-img">
+                <img src="{% static 'images/slide_3.jpg' %}" alt="" class="landing-img">
                 <div class="hovering-card" id="card-3">
                     <div class="card-title">All Kind Of Houses</div><span class="for">For Rent</span>
                     <div class="price">
@@ -85,7 +86,7 @@ Home
     </div>
     <div class="row container">
         <div class="card">
-            <img src="featured-1.jpg" alt="" class="featured-img">
+            <img src="{% static 'images/featured_1.jpg' %}" alt="" class="featured-img">
             <div class="card-stuff">
                 <div class="featured-card-title">Kasarani <br>Sunton</div>
                 <a href="" class="rent-button">RENT | KES 25,000</a>
@@ -107,7 +108,7 @@ Home
             </div>
         </div>
         <div class="card">
-            <img src="featured-2.jpg" alt="" class="featured-img">
+            <img src="{% static 'images/featured_2.jpg' %}" alt="" class="featured-img">
             <div class="card-stuff">
                 <div class="featured-card-title">Westlands <br>Nairobi</div>
                 <a href="" class="rent-button">RENT | KES 32,000</a>
@@ -129,7 +130,7 @@ Home
             </div>
         </div>
         <div class="card">
-            <img src="featured-3.jpg" alt="" class="featured-img">
+            <img src="{% static 'images/featured_3.jpg' %}" alt="" class="featured-img">
             <div class="card-stuff">
                 <div class="featured-card-title">Pwani <br>Mombasa</div>
                 <a href="" class="rent-button">RENT | KES 50,000</a>
@@ -195,20 +196,40 @@ Home
                 </form>
             </div>
         </div>
-        <div class="right-side"></div>
+        <div class="right-side">
+            <div id="map">
+                <script>
+                    // Initialize and add the map
+                    function initMap() {
+                        // The location of Uluru
+                        const uluru = { lat: -25.344, lng: 131.036 };
+                        // The map, centered at Uluru
+                        const map = new google.maps.Map(document.getElementById("map"), {
+                            zoom: 4,
+                            center: uluru,
+                        });
+                        // The marker, positioned at Uluru
+                        const marker = new google.maps.Marker({
+                            position: uluru,
+                            map: map,
+                        });
+                    }
+                </script>
+            </div>
+        </div>
     </div>
 </section>
 <section class="testimonials">
     <h1>Testimonials</h1>
     <div class="container flex">
-        <div class="left"><img src="testimonial-1.jpg" alt="" class="testimonial-img"></div>
+        <div class="left"><img src="{% static 'images/testimonial_1.jpg' %}" alt="" class="testimonial-img"></div>
         <div class="right">
             <span class="quote">"</span>
             <div class="paragraph">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur doloremque illo enim inventore
                 voluptatum sed, sint at iure nobis reprehenderit?
             </div>
-            <div class="flex b"><img src="testimonial-1.jpg" alt="" class="small-img">
+            <div class="flex b"><img src="{% static 'images/testimonial_1.jpg' %}" alt="" class="small-img">
                 <div class="name">Akira & Boruto</div>
             </div>
         </div>
@@ -218,6 +239,11 @@ Home
     <div class="footer">Bosire Allan Nyaachi | The Agency</div>
     <div><a href="" class="footer-a">GitHub</a></div>
 </footer>
+
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&libraries=&v=weekly"
+    async></script>
+
 <script>
     const sm_nav = document.querySelector('.links');
     const bar = document.querySelector('.bar');

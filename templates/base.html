@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" href="{% static 'js/swiper-bundle.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css' %}" />
     <script src="{% static 'js/swiper-bundle.min.js' %}"></script>
     <link href="{% static 'css/aos.css' %}" rel="stylesheet">
     <script src="{% static 'js/aos.js' %}"></script>
@@ -29,10 +29,10 @@
     <meta name="msapplication-TileImage" content="{% static 'favicon/ms-icon-144x144.png' %}">
     <meta name="theme-color" content="#ffffff">
     <title>
-    {% block title %}
-        
-    {% endblock title %}
-        </title>
+        {% block title %}
+
+        {% endblock title %}
+    </title>
 </head>
 
 <body>
@@ -56,6 +56,8 @@
         </div>
     </nav>
     {% block content %}
+    
     {% endblock content %}
 </body>
+
 </html>

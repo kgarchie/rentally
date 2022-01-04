@@ -19,9 +19,9 @@ def add_house(request):
         price = request.POST['price']
         rooms = request.POST['rooms']
         parking = request.POST['parking']
-        type = request.POST['type']
-        house = House.objects.create(title=title, location=location, price=price, rooms=rooms, parking=parking, type=type)
+        typer = request.POST['type']
         images = request.FILES.getlist('image')
+        house = House.objects.create(title=title, location=location, price=price, rooms=rooms, parking=parking, typer=typer)
         for image in images:
             print('Image Added')
             Images.objects.create(image=image, house=house)
