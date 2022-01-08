@@ -1,0 +1,614 @@
+:root {
+    --accent: hsl(208, 52%, 44%);
+    --accent-2: hsl(143, 63%, 49%);
+    --nav-color: rgba(0, 0, 0, 0.5);
+    font-family: "Varela Round", Arial, sans-serif;
+}
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav {
+    display: flex;
+    width: 100vw;
+    height: 4.5rem;
+    left: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--nav-color);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.logo {
+    margin-left: 40px;
+}
+
+.logo-a, .logo-a * {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.logo-a {
+    color: white;
+}
+
+.logo-a .bold {
+    color: var(--accent);
+}
+
+.links {
+    display: flex;
+    gap: 1rem;
+    margin-right: 50px;
+    align-items: center;
+}
+
+.links ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-right: 1rem;
+}
+
+.phone a {
+    font-size: 1.15rem;
+}
+
+.contact-us {
+    padding: 0.5rem 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50px;
+}
+
+.contact-us:hover {
+    background-color: white;
+    color: var(--accent);
+}
+
+.landing {
+    width: 100vw;
+}
+
+.landing-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: inherit;
+    width: inherit;
+    object-fit: cover;
+    height: 100vh;
+}
+
+.hovering-card {
+    position: relative;
+    margin-top: 10vh;
+    margin-left: 10vw;
+    min-height: 400px;
+    background-color: white;
+    padding: 30px;
+    width: 40%;
+    box-shadow: 4px 11px 35px -14px rgba(0, 0, 0, 0.5);
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    max-width: 250px;
+    display: inline-block;
+}
+
+.price {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 10px;
+    color: var(--accent-2);
+}
+
+.cash {
+    font-size: 1.5rem;
+}
+
+.month {
+    text-transform: uppercase;
+    font-size: 10px;
+    align-self: flex-end;
+}
+
+.for {
+    position: absolute;
+    color: white;
+    background-color: var(--accent-2);
+    padding: 0.3rem 1.1rem;
+    margin-left: 4.9vw;
+    pointer-events: none;
+}
+
+.description {
+    color: hsl(214, 7%, 52%);
+    margin: 30px 0;
+    min-height: 80px;
+}
+
+.row {
+    display: flex;
+}
+
+.features {
+    color: hsl(214, 7%, 52%);
+    width: 80%;
+    justify-content: space-between;
+    height: 20px;
+}
+
+.features::before, .features::after {
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    background-color: hsla(215, 7%, 52%, 0.3);
+}
+
+.features::before {
+    margin-top: -15px;
+}
+
+.features::after {
+    margin-top: 35px;
+}
+
+.features span {
+    color: var(--accent-2);
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.learn-more {
+    margin-top: 70px;
+}
+
+.learn-more a {
+    background-color: hsl(207, 88%, 50%);
+    padding: 0.7rem 1.4rem;
+    color: white;
+    border-radius: 20px;
+}
+
+.learn-more a:hover {
+    background-color: hsla(207, 88%, 50%, 0.7);
+}
+
+.featured {
+    margin-top: 10vh;
+    width: 100vw;
+}
+
+.container {
+    padding: 0 4rem;
+}
+
+.row.container {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: space-around;
+}
+
+h1 {
+    display: inline-block;
+    margin-left: 50px;
+    margin-bottom: 40px;
+}
+
+.m {
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.m span {
+    margin-right: 100px;
+}
+
+.card {
+    width: 350px;
+    height: 470px;
+    box-shadow: 4px 11px 35px -14px rgba(0, 0, 0, 1);
+}
+
+.featured-img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+}
+
+.card-stuff {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    position: absolute;
+    height: 200px;
+    margin-top: -230px;
+    overflow: hidden;
+}
+
+.featured-card-title {
+    font-size: 2rem;
+}
+
+.rent-button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 170px;
+    text-align: center;
+    padding: 0.7rem 0.7rem;
+    border: 2px solid hsl(143, 63%, 49%);
+    border-radius: 30px;
+}
+
+.rent-button:hover {
+    background-color: hsl(143, 63%, 49%);
+}
+
+.click {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.more-info {
+    display: flex;
+    justify-content: space-between;
+    margin-left: -20px;
+    width: 350px;
+    background-color: hsl(143, 63%, 49%);
+    padding: 0.25rem 20px;
+}
+
+.area-a, .bedrooms-b, .parking-p {
+    display: block;
+    color: black;
+}
+
+.search {
+    margin-top: 10vh;
+    min-height: 500px;
+}
+
+.enclos {
+    display: flex;
+}
+
+.left-side {
+    width: 35%;
+    min-height: 50vh;
+    background-color: var(--accent-2);
+}
+
+.form {
+    padding-top: 10vh;
+    margin: auto;
+    width: 80%;
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 250px;
+    color: white;
+    font-size: 1.4rem;
+}
+
+.ka {
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.p {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.form select {
+    width: 200px;
+    height: 50px;
+    padding: 0 0.5rem;
+    border: 2px solid green;
+    font-size: 1.07rem;
+}
+
+.numbered, .numbered-a {
+    width: 80px;
+    height: 50px;
+    border: 2px solid green;
+    padding: 0 0.5rem;
+}
+
+.numbered {
+    margin-right: 40px;
+    margin-left: auto;
+}
+
+.submit {
+    margin-top: 20px;
+    margin-left: auto;
+    padding: 0.5rem 1rem;
+    background-color: var(--nav-color);
+}
+
+.submit:hover {
+    background-color: white;
+    color: black;
+}
+
+.right-side {
+    width: 65%;
+}
+
+.testimonials {
+    margin-top: 10vh;
+}
+
+.testimonial-img {
+    width: 500px;
+    box-shadow: 4px 11px 35px -14px rgba(0, 0, 0, 0.9);
+}
+
+.small-img {
+    width: 200px;
+    clip-path: circle(50px);
+    object-position: 10px 10px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    row-gap: 2rem;
+}
+
+.left {
+    width: 50vw;
+    display: inline-block;
+}
+
+.right {
+    width: 50vw;
+}
+
+.quote {
+    margin-left: 240px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    padding: 1rem;
+    padding-top: 2rem;
+    background-color: var(--accent-2);
+    clip-path: circle(15px);
+    color: white;
+}
+
+.paragraph {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    color: hsl(225, 3%, 24%);
+    background-color: rgb(206, 204, 204);
+    min-height: 150px;
+}
+
+.name {
+    margin-left: -30px;
+    font-weight: bold;
+    color: hsl(215, 7%, 52%);
+}
+
+.b {
+    margin-top: 0px;
+}
+
+footer {
+    margin-top: 100px;
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #333333;
+    color: white;
+}
+
+.footer {
+    margin-bottom: 40px;
+}
+
+.footer-a {
+    padding: 0.5rem 1rem;
+    border: 2px solid #118DF0;
+    transition: 0.3s;
+}
+
+.footer-a:hover {
+    background-color: #118DF0;
+    color: black;
+    transition: 0.3s;
+}
+
+button.button{
+    border: 2px solid rgb(16, 180, 103);
+}
+
+.button{
+    cursor: pointer;
+    padding: 0.25em 0.5em;
+    color: white;
+}
+
+.button:hover{
+    background-color: rgb(31, 255, 151);
+    color: black;
+}
+
+.form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.8rem;
+}
+
+.form-item{
+    min-width: 350px;
+}
+
+.form-item label{
+    display: inline-block;
+    width: 100px;
+}
+
+.form-item input{
+    height: 2.5em;
+    margin-left: 70px;
+}
+
+.form-item > [type=submit]{
+    background-color: rgb(16, 180, 103);
+}
+
+@media screen and (max-width: 768px) {
+    .logo {
+        margin-left: 10px;
+    }
+    .links ul {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        background-color: steelblue;
+        height: 100vh;
+        top: 0;
+        width: 25vw;
+        margin: 0;
+        padding-top: 15vh;
+        right: -25%;
+        transition: right 0.5s ease;
+    }
+    .links.active ul {
+        right: 0;
+        transition: right 0.5s ease;
+    }
+    .nav-link {
+        background-color: var(--accent);
+        padding: 0.5rem 1rem;
+        width: 100px;
+        text-align: center;
+    }
+    .nav-link:hover, .nav-link:focus {
+        background-color: var(--accent-2);
+    }
+    .phone {
+        display: none;
+        font-size: 1rem;
+    }
+    .links {
+        margin-right: 0;
+    }
+    .bar {
+        display: flex;
+        flex-direction: column;
+        margin-right: 20px;
+        height: 40px;
+        width: 45px;
+        justify-content: space-evenly;
+        align-items: center;
+        z-index: 1;
+    }
+    .bar:focus, .bar:hover {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+    .bar:focus div, .bar:hover div {
+        background-color: hsl(0, 0%, 15%);
+    }
+    .bar div {
+        width: 30px;
+        height: 2px;
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+    .card-stuff {
+        overflow: visible;
+        transform: translateY(-20px);
+    }
+    .features {
+        flex-wrap: wrap;
+    }
+    .features::after {
+        margin-top: 50px;
+    }
+    .enclos {
+        width: 100%;
+    }
+    .left-side {
+        width: 100%;
+        margin-left: auto;
+    }
+    .right-side {
+        width: 30vw;
+    }
+    .paragraph {
+        display: block;
+        margin-left: 10vw;
+        margin-right: -10vw;
+    }
+    .b {
+        margin-left: 2vw;
+    }
+    .row.container {
+        row-gap: 3rem;
+    }
+    .flex {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .hovering-card {
+        min-height: fit-content;
+    }
+    .features {
+        line-height: 1.5rem;
+    }
+    .learn-more {
+        margin-top: 120px;
+    }
+    .features::after {
+        margin-top: 100px;
+    }
+}
+
+.swiper {
+    height: calc(100vh - 5rem);
+}
+
+#map {
+    z-index: 200;
+    height: 500px;
+    width: 100%;
+}
