@@ -1,1 +1,1 @@
-web: gunicorn rentally.wsgi
+web: gunicorn rentally.wsgi --log-file -
